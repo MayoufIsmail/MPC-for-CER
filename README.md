@@ -1,5 +1,6 @@
 # MPC-for-CER
 Predictive Control for Controlling Energy Resources
+'python
 # Inputs: ctrl_action, pv[t], load[t], batt_cap_max, max_batt_io
 # ctrl_action = [0, 1] charge/discharge
 net_gen[t]= pv[t] - load[t]
@@ -20,3 +21,4 @@ if ctrl_action [t] == 0: # discharge
 		discharge_to_grid[t] = 0; discharge_to_load [t] = min(-netgen[t], batt_cap [t], max_batt_io) 
 batt_cap[t+1] = batt_cap[t] + pv_charge[t] + grid_charge[t] - discharge_to_load[t] - discharge_to_grid[t] 
 imported[t] = grid_to_load [t] + grid_charge [t]
+'
