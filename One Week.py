@@ -10,7 +10,7 @@ load_data = pd.read_csv(r"C:\Users\Ismail\OneDrive\Documents\WiWi 23 24\Coordina
 pv_data['data.PV'] = pd.to_numeric(pv_data['data.PV']) # Replace '<column_name>' with the actual column name containing PV output
 load_data['data.Load'] = pd.to_numeric(load_data['data.Load']) # Replace '<column_name>' with the actual column name containing load consumption
 
-# Number of time steps (assuming it's the same for both PV and load data)
+# Number of time steps (15 min)
 time_steps = len(pv_data)
 
 # BSS parameters
